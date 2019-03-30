@@ -3,7 +3,9 @@
 Using the included bare test classes, test all the methods in the GamePiece and TicTacToe classes.  Find and correct all errors.  Make sure to have a test for each method and to use equivalence partitioning, boundary value analysis, negative and positive testing.
 
 Once you have completed your work, mark the assignment as completed by placing an X between the brackets below.
+
 [] Completed
+
 commit and push your work to your repository.
 
 ## Steps to Clone Your Repository
