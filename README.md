@@ -20,7 +20,7 @@ Complete the following steps:
 6.  Now you can work on SkillBuilder8.
   
 ## How to Commit Your Work
-You should get in the habit of versioning your work as you code.  In this assignment, once you complete coding the <span sfont-family:'courier new',courier;>GamePieceTest</span> class, you should stage and commit your work.  For this example, this would take the following steps:
+You should get in the habit of versioning your work as you code.  In this assignment, once you complete coding the GamePieceTest class, you should stage and commit your work.  For this example, this would take the following steps:
 1. `git add GamePieceTest.java`
-   Note: if you modified more than one file (i.e. style="font-family:'courier new',courier;">GamePiece.java</span> as well),   then use `git add .`
+   Note: if you modified more than one file (i.e. GamePiece.java as well),   then use `git add .`
 2. Commit your work by typing: `git commit -m "commit message"`
