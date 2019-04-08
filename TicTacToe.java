@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 /**
  * This class implements the game we all love to
  * not play.
