@@ -13,6 +13,7 @@ import org.junit.Test;
  */
 public class TicTacToeTest
 {
+  private TicTacToe Board;
     /**
      * Default constructor for test class TicTacToeTest
      */
@@ -28,6 +29,7 @@ public class TicTacToeTest
     @Before
     public void setUp()
     {
+      Board = new TicTacToe();
     }
 
     /**
@@ -38,5 +40,35 @@ public class TicTacToeTest
     @After
     public void tearDown()
     {
+    }
+    @Test
+    public void isEmpty()
+    {
+      assertTrue(Board.isEmpty(4));
+      Board.add(4);
+      assertTrue(!Board.isEmpty(4));
+    }
+    
+    @Test
+    public void isValid()
+    {
+        assertTrue(Board.isValid(0));
+        assertTrue(Board.isValid(1));
+        assertTrue(Board.isValid(2));
+        assertTrue(Board.isValid(3));
+        assertTrue(Board.isValid(4));
+        assertTrue(Board.isValid(5));
+        assertTrue(Board.isValid(6));
+        assertTrue(Board.isValid(7));
+        assertTrue(Board.isValid(8));
+        assertTrue(!Board.isValid(9));
+        assertTrue(!Board.isValid(10));
+        assertTrue(!Board.isValid(11));
+    }
+    
+    @Test
+    public void movesRemaining()
+    {
+        
     }
 }
