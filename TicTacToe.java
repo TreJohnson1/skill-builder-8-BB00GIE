@@ -1,4 +1,4 @@
- import java.util.Scanner;
+import java.util.*;
 /**
  * This class implements the game we all love to
  * not play.
@@ -56,9 +56,9 @@ public class TicTacToe
         if (board[row][col] == null){
             return null;
         }
-        return new GamePiece(board[row][col]);
+        return board[row][col];
     }
-    
+
     private int[] getCoord(int location)
     {
         int[] coord = new int[2];
@@ -66,20 +66,24 @@ public class TicTacToe
         coord[1] = location % board.length;
         return coord;
     }
-    
+
     public GamePiece getWinner()
     {
         int[][] winningPattern={{0,1,2},{1,4,7},{2,5,8},
-                        {0,3,6},{3,4,5},{6,7,8},
-                        {0,4,8},{2,4,6}
-                       };
-        GamePiece winningPiece=null;      
+                {0,3,6},{3,4,5},{6,7,8},
+                {0,4,8},{2,4,6}
+            };
+            
+        GamePiece winningPiece=null;
+        
         for(int i=0; i < winningPattern.length && winningPiece == null; i++){
             int[] pattern = winningPattern[i];
-            if (getPiece(pattern[0]) == getPiece(pattern[1]) &&
-                getPiece(pattern[1]) == getPiece(pattern[2])){
-                  winningPiece = getPiece(pattern[0]);  
+            //System.out.println(Arrays.toString(pattern));
+            //System.out.println(getPiece(pattern[0]) + " " + getPiece(pattern[1]) + " " + getPiece(pattern[2]));
+            if ( getPiece(pattern[0]) == getPiece(pattern[1]) || getPiece(pattern[1]) == getPiece(pattern[2]) ){
+                winningPiece = getPiece(pattern[0]);  
             }
+
         }
         return winningPiece;
     }
@@ -105,6 +109,8 @@ public class TicTacToe
                 board[row][col] = null;
             }
         }
+        numOfMoves = 0;
+        nextPlayerIndex = 0;
     }
 
     public String toString()
@@ -150,7 +156,7 @@ public class TicTacToe
         ttt.add(6);
         System.out.println(ttt);
         System.out.println(ttt.getWinner()==null?"No Winner!":ttt.getWinner());
-        
+
         //System.out.println(ttt);
     }
 }
