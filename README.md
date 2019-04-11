@@ -4,7 +4,7 @@ Using the included bare test classes, test all the methods in the GamePiece and 
 
 Once you have completed your work, mark the assignment as completed by placing an X between the brackets below.
 
-[] Completed
+[X] Completed
 
 commit and push your work to your repository.
 
